@@ -82,7 +82,7 @@ body {
   z-index: -1;
 }
 
-#display {
+.display {
   margin: 0 10px;
   height: 150px;
   width: auto;
@@ -103,7 +103,7 @@ body {
   overflow-x: scroll;
 }
 
-#display::-webkit-scrollbar {
+.display::-webkit-scrollbar {
   display: block;
   height: 3px;
 }
@@ -131,7 +131,7 @@ button:hover {
   background-color: var(--white-color);
 }
 
-.calculator #display {
+.calculator .display {
   color: var(--primary-color-secund-theme);
 }
 
@@ -162,7 +162,7 @@ button:hover {
   box-shadow: none;
 }
 
-.calculator.dark #display {
+.calculator.dark .display {
   color: #f8fafd;
 }
 

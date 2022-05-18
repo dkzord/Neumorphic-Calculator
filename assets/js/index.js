@@ -13,7 +13,36 @@ themeToggleBtn.onclick = () => {
   isDark = !isDark;
 }
 
+/* Sistema calculadora */
 
-console.log(toggleIcon);
+function criaCalculadora() {
+  return {
+    display: document.querySelector('.display'),
 
+
+    inicia() {
+      this.clickBtn();
+    },
+
+    clickBtn() {
+      document.addEventListener('click', (event) => {
+        const el = event.target;
+        console.log(el);
+
+        if (el.classList.contains('btn-number')) {
+          this.btnParaDisplay(el.innerText);
+        }
+      });
+    },
+
+    btnParaDisplay(valor) {
+      this.display.value += valor;
+      console.log(this.display.value);
+    },
+
+  };
+}
+
+const calculadora = criaCalculadora();
+calculadora.inicia();
 
