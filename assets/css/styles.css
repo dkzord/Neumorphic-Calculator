@@ -2,10 +2,12 @@
 
 :root {
   --white-color: #fff;
-
+  --black-color: #000;
   --primary-color: #ecf0f3;
-
   --secondary-color: #333;
+
+  --primary-color-secund-theme: #0a1e23;
+  --secondary-color-secund-theme: #ffd5d8;
 
   --gradient-blue-color: rgba(79, 51, 176, 1);
   --gradient-pink-color: rgba(210,53, 165);
@@ -17,7 +19,7 @@
   box-sizing: border-box;
   outline: none;
   transition: all 0.5s ease;
-  font-family: 'Press Start 2P', cursive;
+  /* font-family: 'Press Start 2P', cursive; */
 }
 
 /* .btn-number, .btn-oparator {
@@ -70,13 +72,13 @@ body {
 
 .theme-toggler::before {
   content: ' ';
-  height: 30px;
-  width: 30px;
+  height: 25px;
+  width: 25px;
   position: absolute;
   top: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-25%, -60%);
   border-radius: 50%;
-  background-color: var(--secondary-color);
+  background-color: var(--secondary-color) !important;
   z-index: -1;
 }
 
@@ -119,4 +121,36 @@ button {
   cursor: pointer;
 }
 
+button:hover {
+  transform: scale(1.15);
+}
 
+/* Secund theme light */
+
+.calculator {
+  background-color: var(--white-color);
+}
+
+.calculator #display {
+  color: var(--primary-color-secund-theme);
+}
+
+.calculator button#clear {
+  background-color: var(--secondary-color-secund-theme);
+  color: #fc4552;
+}
+
+.calculator button.btn-number {
+  background-color: #c3eaff;
+  color: var(--black-color);
+}
+
+.calculator button.btn-oparator {
+  background-color: #ffd0fd;
+  color: #f967f3;
+}
+
+.calculator button.btn-equal{
+  background-color: #adf9e7;
+  color: var(--black-color);
+}
