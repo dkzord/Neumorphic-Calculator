@@ -1,5 +1,5 @@
 // const display = document.querySelector('#display');
-const buttons = document.querySelector('button');
+// const buttons = document.querySelector('button');
 
 const themeToggleBtn = document.querySelector('.theme-toggler');
 const calculator = document.querySelector('.calculator');
@@ -24,23 +24,23 @@ function criaCalculadora() {
     },
 
     clickBtn() {
-      document.addEventListener('click', (event) => {
+      document.addEventListener('click', event => {
         const el = event.target;
-        console.log(this.display)
 
+        console.log(el.classList.contains('btn-number'))
         if (el.classList.contains('btn-number')) {
           this.btnParaDisplay(el.innerText);
         }
-        console.log('To aqui')
 
-        if (el.classList.contains('clear')) {
+        console.log(el.classList)
+        if (el.classList.contains('btnClear')) {
           this.clearDisplay();
         }
       });
     },
 
     clearDisplay() {
-      this.display.innerText = '';
+      this.display.innerHTML = '';
     },
 
     btnParaDisplay(valor) {
