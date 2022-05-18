@@ -1,4 +1,4 @@
-const display = document.querySelector('#display');
+// const display = document.querySelector('#display');
 const buttons = document.querySelector('button');
 
 const themeToggleBtn = document.querySelector('.theme-toggler');
@@ -19,7 +19,6 @@ function criaCalculadora() {
   return {
     display: document.querySelector('.display'),
 
-
     inicia() {
       this.clickBtn();
     },
@@ -27,7 +26,7 @@ function criaCalculadora() {
     clickBtn() {
       document.addEventListener('click', (event) => {
         const el = event.target;
-        console.log(el);
+        console.log(this.display)
 
         if (el.classList.contains('btn-number')) {
           this.btnParaDisplay(el.innerText);
@@ -36,8 +35,7 @@ function criaCalculadora() {
     },
 
     btnParaDisplay(valor) {
-      this.display.value += valor;
-      console.log(this.display.value);
+      this.display.innerText += valor;
     },
 
   };

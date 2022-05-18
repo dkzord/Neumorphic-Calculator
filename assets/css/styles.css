@@ -87,6 +87,7 @@ body {
   height: 150px;
   width: auto;
   max-width: 270px;
+  padding-right: 15px;
 
   background-color: var(--primary-color);
   box-shadow: inset -5px -5px 12px var(--white-color),
@@ -163,7 +164,7 @@ button:hover {
 }
 
 .calculator.dark .display {
-  color: #f8fafd;
+  color: var(--black-color);
 }
 
 .calculator.dark button {
