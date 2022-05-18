@@ -136,7 +136,7 @@ button:hover {
   color: var(--primary-color-secund-theme);
 }
 
-.calculator button#clear {
+.calculator button.clear {
   background-color: var(--secondary-color-secund-theme);
   color: #fc4552;
 }
@@ -171,7 +171,7 @@ button:hover {
   box-shadow: none;
 }
 
-.calculator.dark button#clear {
+.calculator.dark button.clear {
   background-color: #2d191e;
   color: #bd3740;
 }

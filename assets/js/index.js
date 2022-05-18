@@ -31,7 +31,16 @@ function criaCalculadora() {
         if (el.classList.contains('btn-number')) {
           this.btnParaDisplay(el.innerText);
         }
+        console.log('To aqui')
+
+        if (el.classList.contains('clear')) {
+          this.clearDisplay();
+        }
       });
+    },
+
+    clearDisplay() {
+      this.display.innerText = '';
     },
 
     btnParaDisplay(valor) {
